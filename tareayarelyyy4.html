@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio </title>
+    <style>
+        .destacado {
+            color: #880ee0;
+            font-weight: bold;
+
+        }
+        .resaltado{
+
+          background-color: rgb(74, 971, 27);
+    padding:10px  
+
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <p id="parrafo">Hola, bienvenido a mi primera página</p>
+        <button id="btn"> Haz clic aqui </button>   
+     </div>
+     <ul id="lista"></ul>
+     <script>
+        window.onload = function () {
+            const boton =
+            document.getElementById("btn");
+            const parrafo =
+            document.getElementById("parrafo");
+            const lista =
+            document.getElementById("lista");
+
+            boton.addEventListener("click",function() {
+                parrafo.textContent =
+                "¡El texto ha cambiado con JavaScript!";
+            })
+
+            parrafo.addEventListener("mouseover",
+                function() {
+
+                    parrafo.classList.add("resaltado");
+                });
+
+
+
+                const nuevoElemento =
+                document.createElement("li");
+                nuevoElemento.textContent = 
+                "Nuevo elemento de lista agregado por JS";
+
+                lista.appendChild(nuevoElemento);
+        };
+     </script>
+</body>
+</html>
